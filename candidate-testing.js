@@ -66,7 +66,7 @@ if (candidateAnswers === correctAnswers) {
 function runProgram() {
   askForName();
   // TODO 1.1c: Greet candidate using their name //
-   console.log("Hi" + candidatename + ".");
+   console.log("Hi" + candidateName + ".");
   askQuestion();
   gradeQuiz(this.candidateAnswers);
 }
