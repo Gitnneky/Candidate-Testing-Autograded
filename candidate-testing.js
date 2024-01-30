@@ -35,15 +35,20 @@ function askQuestion() {
 function gradeQuiz(candidateAnswers) {
   console.log(candidateAnswer);
   //   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-  for (let i = 0; i < questions.length; i++) {
+//   for (let i = 0; i < questions.length; i++) {
   
-  if (candidateAnswers[i] === correctAnswers[i]) {
-    console.log("You are correct !");
-  } else {
-    console.log("Sorry your answer is incorrect.");
-  }
+//   if (candidateAnswers[i] === correctAnswers[i]) {
+//     console.log("You are correct !");
+//   } else {
+//     console.log("Sorry your answer is incorrect.");
+//   }
+// }
+for(let i = 0; i < questions.length; i++) {
+  
+  console.log(`${questions[i]}`)
+  console.log(`userResponse ${candidateAnswers[i]}`);
+  console.log(`correctresponse ${correctAnswers[i]}`);
 }
-  console.log(`User Response ${candidateAnswers} Correct Response ${correctAnswers}`)
   
   let grade = 0;  //TODO 3.2 use this variable to calculate the candidates score.
 let numOfCorrectAnswer = 0;
