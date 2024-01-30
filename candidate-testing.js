@@ -45,8 +45,23 @@ function gradeQuiz(candidateAnswers) {
 }
   console.log(`User Response ${candidateAnswers} Correct Response ${correctAnswers}`)
   
-  let grade;  //TODO 3.2 use this variable to calculate the candidates score.
+  let grade = 0;  //TODO 3.2 use this variable to calculate the candidates score.
+let numOfCorrectAnswer = 0;
+for( i=0; i<correctAnswers.length; i++){
+ if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()){
+  // grade += 20;
+  numOfCorrectAnswer++
+ }
+}
+grade = numOfCorrectAnswer/questions.length *100;
 
+if (grade >80) {
+  console.log(`Congratulations! You have Passed the quiz with ${grade}%}`);
+} 
+else{
+  console.log(`Sorry, You have failed the quiz. Better luck nex time.`);
+}
+console.log(grade);
 
   return grade;
 }
